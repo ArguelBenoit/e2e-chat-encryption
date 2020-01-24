@@ -1,0 +1,20 @@
+{
+  "name": "e2e-chat-encryption",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Benoit Arguel",
+  "license": "unlicense",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.16.0",
+    "eslint-config-benoitarguel": "^0.2.2",
+    "eslint-plugin-react": "^7.12.4"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "keypair": "^1.0.1",
+    "prompt": "^1.0.0",
+    "winston": "^3.2.1"
+  }
+}
