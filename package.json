@@ -14,7 +14,6 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "keypair": "^1.0.1",
-    "prompt": "^1.0.0",
-    "smime": "^2.0.1"
+    "prompt": "^1.0.0"
   }
 }

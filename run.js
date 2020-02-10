@@ -1,5 +1,3 @@
-
-// var prompt = require('prompt');
 var fs = require('fs');
 var keyGen = require('./bin/keyGen.js');
 var encrypt = require('./bin/encrypt.js');
