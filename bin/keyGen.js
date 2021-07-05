@@ -1,8 +1,7 @@
-
 const prompt = require('prompt');
 const fs = require('fs');
 const keypair = require('keypair');
-const keysExisting = fs.existsSync('./keys/public.key') || fs.existsSync('./keys/private.key');
+const keysExisting = fs.existsSync('./keys/public.key') && fs.existsSync('./keys/private.key');
 
 module.exports = () => {
   let gen = () => {
