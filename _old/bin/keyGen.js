@@ -6,6 +6,7 @@ const keysExisting = fs.existsSync('./keys/public.key') && fs.existsSync('./keys
 module.exports = () => {
   let gen = () => {
     console.log('Generation des clefs...');
+    alert('Generation des clefs...');
     let pair = keypair(2048);
     fs.writeFileSync('./keys/public.key', pair['public']);
     fs.writeFileSync('./keys/private.key', pair['private']);
