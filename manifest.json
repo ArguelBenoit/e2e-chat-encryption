@@ -1,22 +1,25 @@
 {
   "manifest_version": 2,
-  "name": "Beastify",
+  "name": "e2e-chat-encryption",
   "version": "1.0",
 
-  "description": "Ajoute une icône à la barre d'outil pour une action navigateur. Cliquez sur le bouton pour choisir une bête. Le contenu de l'onglet actif sera alors remplacé par une image de la bête choisie. Voir https://developer.mozilla.org/fr/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
-  "icons": {
-    "48": "icons/beasts-48.png"
-  },
+  "description": "End to end, chat encryption system",
+  "homepage_url": "https://github.com/ArguelBenoit/e2e-chat-encryption",
 
   "permissions": [
     "activeTab"
   ],
 
+  "icons": {
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+
   "browser_action": {
-    "default_icon": "icons/beasts-32.png",
-    "default_title": "Beastify",
-    "default_popup": "popup/choose_beast.html"
+    "default_icon": "icons/icon-96.png",
+    "default_title": "e2e-chat-encryption",
+    "default_popup": "public/index.html"
   },
 
   "web_accessible_resources": [

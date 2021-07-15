@@ -1,0 +1,70 @@
+
+/* yellow #ffd73a */
+/* orange #ff8a35 */
+/* green #13ed00 */
+/* grey #ccc */
+
+
+/* common */
+.e2e-chat-encryption {
+  max-width: 400px;
+  background: black;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 95%;
+  color: #ccc;
+}
+.e2e-chat-encryption button {
+  min-width: 270px;
+  min-height: 50px;
+  padding: 0 20px;
+  font-weight: bolder;
+  border-radius: 10px;
+  background: black;
+  font-size: 100%;
+  display: block;
+  margin: 20px auto 0 auto;
+  /* */
+  border: 1px solid white;
+  color: white;
+}
+.e2e-chat-encryption button:hover,
+.e2e-chat-encryption button:active {
+  cursor: pointer;
+  /* */
+  background: white;
+  color: black;
+}
+.e2e-chat-encryption button:active {
+  transform: scale(0.98);
+}
+
+
+/* header */
+.e2e-chat-encryption .header img {
+  filter: invert(1);
+  display: block;
+  margin: auto;
+}
+.e2e-chat-encryption .header p {
+  text-align: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  font-size: 88%;
+}
+
+
+/* keys content */
+.keys-content p {
+  text-align: center;
+  color: white;
+  font-style: italic;
+}
+.keys-content button {
+  border: 1px solid #ff8a35;
+  color: #ff8a35
+}
+.e2e-chat-encryption button:hover,
+.e2e-chat-encryption button:active {
+  background: #ff8a35;
+}
