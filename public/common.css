@@ -1,0 +1,122 @@
+
+
+/******* main *******/
+body {
+  margin: auto;
+  max-width: 380px;
+  background: #060015;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 95%;
+  color: white;
+}
+a {
+  font-weight: bolder;
+  color: #f8a300;
+}
+
+
+
+/******* utility *******/
+.u-flex {
+  display: flex;
+  justify-content: center;
+}
+.u-purple-container {
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #160f2a;
+}
+.u-margin-bottom-s { margin-bottom: 10px; }
+.u-margin-bottom-m { margin-bottom: 15px; }
+.u-margin-bottom-l { margin-bottom: 20px; }
+.u-margin-bottom-xl { margin-bottom: 30px; }
+
+.u-margin-top-s { margin-top: 10px; }
+.u-margin-top-m { margin-top: 15px; }
+.u-margin-top-l { margin-top: 20px; }
+.u-margin-top-xl { margin-top: 30px; }
+
+.u-margin-left-s { margin-left: 10px; }
+.u-margin-left-m { margin-left: 15px; }
+.u-margin-left-l { margin-left: 20px; }
+.u-margin-left-xl { margin-left: 30px; }
+
+.u-margin-right-s { margin-right: 10px; }
+.u-margin-right-m { margin-right: 15px; }
+.u-margin-right-l { margin-right: 20px; }
+.u-margin-right-xl { margin-right: 30px; }
+
+.u-margin-s { margin: 10px; }
+.u-margin-m { margin: 15px; }
+.u-margin-l { margin: 20px; }
+.u-margin-xl { margin: 30px; }
+
+
+.u-padding-bottom-s { padding-bottom: 10px; }
+.u-padding-bottom-m { padding-bottom: 15px; }
+.u-padding-bottom-l { padding-bottom: 20px; }
+.u-padding-bottom-xl { padding-bottom: 30px; }
+
+.u-padding-top-s { padding-top: 10px; }
+.u-padding-top-m { padding-top: 15px; }
+.u-padding-top-l { padding-top: 20px; }
+.u-padding-top-xl { padding-top: 30px; }
+
+.u-padding-left-s { padding-left: 10px; }
+.u-padding-left-m { padding-left: 15px; }
+.u-padding-left-l { padding-left: 20px; }
+.u-padding-left-xl { padding-left: 30px; }
+
+.u-padding-right-s { padding-right: 10px; }
+.u-padding-right-m { padding-right: 15px; }
+.u-padding-right-l { padding-right: 20px; }
+.u-padding-right-xl { padding-right: 30px; }
+
+.u-padding-s { padding: 10px; }
+.u-padding-m { padding: 15px; }
+.u-padding-l { padding: 20px; }
+.u-padding-xl { padding: 30px; }
+
+
+
+
+/******* common button *******/
+.general-button {
+  transition-duration: 100ms;
+  min-height: 34px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background: linear-gradient(70deg, #f8a300, #fae6c1);
+  font-size: 100%;
+  display: block;
+  margin: 0 auto 15px auto;
+  color: #060015;
+  border: none;
+}
+.general-button:hover,
+.general-button:active {
+  cursor: pointer;
+  background: linear-gradient(70deg, #f86900, #ffc898)
+}
+.general-button:active {
+  transform: scale(0.99);
+}
+/******* other common button *******/
+.linkstyle-button {
+  background: none;
+  font-size: 100%;
+  border: none;
+  color: #f8a300;
+  text-decoration: underline;
+  font-style: italic;
+  margin: 0 auto 15px auto;
+  display: block;
+}
+.linkstyle-button.linkstyle-button--red {
+  color: red;
+}
+.linkstyle-button:hover,
+.linkstyle-button:active {
+  cursor: pointer;
+}
