@@ -3,20 +3,38 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css"/>
-    <script src="_actions.js"></script>
   </head>
 
-  <body class="e2e-chat-encryption">
+  <body>
+    <!-- header -->
     <div class="header">
       <img src="../icons/icon-192.png" width="110" height="110" />
       <p><b>BONES</b> is a utility for RSA encryption and decryption of your messages on any communication system. Manage your RSA keys yourself. You are the only master. <a href="https://github.com/ArguelBenoit/e2e-chat-encryption">github</a></p>
     </div>
-    <div class="keys-content">
-      <p>
-        The extension does not have your keys.<br/>What do you want to do?
-      </p>
-      <button class="general-button generate-button" onclick="GenerateNewKeys()">Generate a pair of keys</button>
-      <button class="linkstyle-button import-public-key-button">Add my existing keys</button>
+    <!-- loading -->
+    <div class="loading-content" style="display: none">
+      <p>The grave digger is working, do not touch <b>anything</b> !</p>
+      <div class="loading-content-dot-container">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+      </div>
     </div>
+    <!-- user keys -->
+    <div class="keys-content">
+      <div class="no-keys-content">
+        <p>
+          The extension does not have your keys.<br/>What do you want to do?
+        </p>
+        <button class="general-button generate-button" onclick="(function() { test() })()">Generate a pair of keys</button>
+        <button class="linkstyle-button import-public-key-button">Add my existing keys</button>
+      </div>
+    </div>
+    <!-- friends keys  -->
+    <!-- <div class="friends-keys-content">
+      <div class="no-friends-keys-content">
+      </div>
+    </div> -->
+    <script src="_actions.js"></script>
   </body>
 </html>

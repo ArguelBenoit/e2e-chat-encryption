@@ -3,7 +3,7 @@
   "name": "Bones",
   "version": "1.0",
   "description": "End to end, chat RSA encryption utility",
-  "homepage_url": "https://github.com/ArguelBenoit/e2e-chat-encryption",
+  "homepage_url": "https://github.com/ArguelBenoit/BONES",
   "permissions": [
     "activeTab"
   ],

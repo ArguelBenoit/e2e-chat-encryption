@@ -4728,25 +4728,10 @@ const keypair = require('keypair');
 // const keysExisting = fs.existsSync('./keys/public.key') && fs.existsSync('./keys/private.key');
 
 module.exports = () => {
-  let gen = () => {
-    console.log('Generation des clefs...');
-    let pair = keypair(2048);
-    console.log(pair['public'], pair['private']);
-    // fs.writeFileSync('./keys/public.key', pair['public']);
-    // fs.writeFileSync('./keys/private.key', pair['private']);
-  };
-  gen();
-  // if (keysExisting) {
-  //   const answere = 'Vous possédez déjà des clefs, souhaitez vous les recréer ? (y/n)';
-  //   prompt.start();
-  //   prompt.get(answere, (err, res) => {
-  //     if (res[answere] === 'y') {
-  //       gen();
-  //     }
-  //   });
-  // } else {
-  //   gen();
-  // }
+  let pair = keypair(2048);
+  return pair;
+  // alert(pair['public']);
+  // alert(pair['private']);
 };
 
 },{"keypair":3}],5:[function(require,module,exports){
@@ -4755,11 +4740,23 @@ const keyGen = require('./bin/keyGen.js');
 // const encrypt = require('./bin/encrypt.js');
 // const decrypt = require('./bin/decrypt.js');
 // const fs = require('fs');
+const generateButton = document.querySelector('.generate-button');
 
+const keysContent = document.querySelector('.keys-content');
+const loadingKeys = document.querySelector('.loading-content');
 
-function GenerateNewKeys() { /* eslint-disable-line */
-  keyGen();
-}
+// Generation of keys
+generateButton.onclick = () => {
+  keysContent.style.display = 'none';
+  loadingKeys.style.display = 'inherit';
+  setTimeout(() => {
+    const keys = keyGen();
+    console.log(keys);
+    keysContent.style.display = 'inherit';
+    loadingKeys.style.display = 'none';
+  }, 50);
+};
+
 
 // Crypter un message
 // encrypt('Je met toujours un peu de rhum dans ma bière');
