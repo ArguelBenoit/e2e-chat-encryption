@@ -4,20 +4,14 @@
 .header img {
   display: block;
   margin: auto;
-  border-radius: 50%;
-  overflow: hidden;
 }
 .header p {
   text-align: center;
-  font-size: 88%;
 }
 
 
 
 /******* loading *******/
-.loading {
-  padding: 30px 0;
-}
 .loading p {
   font-style: italic;
   color: #ce44ce;

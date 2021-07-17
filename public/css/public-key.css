@@ -1,7 +1,9 @@
 
 .show-public-key-section {
   padding: 20px;
-  color: yellow;
   overflow: hidden;
-  scroll: auto; 
+}
+
+.public-key-injected {
+  overflow-wrap: anywhere;
 }

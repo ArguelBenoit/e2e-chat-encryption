@@ -2,23 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="common.css"/>
-    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
   </head>
   <body>
 
 
     <!-- header -->
     <header class="header">
-      <img src="../icons/icon-192.png" width="110" height="110" />
-      <p><b>BONES</b> is a utility for RSA encryption and decryption of your messages on any communication system. Manage your RSA keys yourself. You are the only master. <a href="https://github.com/ArguelBenoit/e2e-chat-encryption">github</a></p>
+      <img src="images/logo.png" width="110" height="110" />
+      <p class="u-font-size-s u-margin-bottom-l"><b>BONES</b> is a utility for RSA encryption and decryption of your messages on any communication system. Manage your RSA keys yourself. You are the only master. <a href="https://github.com/ArguelBenoit/e2e-chat-encryption">github</a></p>
     </header>
 
 
     <!-- loading -->
-    <section class="loading u-purple-container" style="display: none">
-      <p>The grave digger is working, do not touch <b>anything</b> !</p>
-      <div class="loading-dot-container">
+    <section class="loading u-purple-container u-padding-l" style="display: inherit">
+      <p>The grave digger is working, do not touch <b>anything</b>!</p>
+      <div class="loading-dot-container u-margin-top-m">
         <div class="dot dot1"></div>
         <div class="dot dot2"></div>
         <div class="dot dot3"></div>
@@ -29,25 +29,36 @@
     <!-- user keys -->
     <section class="user-keys-section u-purple-container">
       <!-- if the keys don't exist  -->
-      <div class="no-user-keys">
+      <div class="no-user-keys u-padding-l" style="display: none">
         <p>
           The extension does not have your keys.<br/>What do you want to do?
         </p>
-        <button class="general-button generate-button" onclick="(function() { test() })()">Generate a pair of keys</button>
+        <button class="general-button generate-button u-margin-bottom-s">Generate a pair of keys</button>
         <button class="linkstyle-button import-public-key-button">Add my existing keys</button>
       </div>
       <!-- if keys existing -->
-      <div class="has-user-keys">
-        <a style="text-decoration: none" href="public-key.html"><button class="general-button generate-button">Show my public key</button></a>
-        <label>Keys actions</label>
-        <a href="">Export</a>
-        <a href="">Delete</a>
-        <a href="">Modify</a>
-        <a href="">Regenerate</a>
+      <div class="has-user-keys" style="display: none">
+        <div class="u-padding-l">
+          <a style="text-decoration: none" href="public-key.html"><button class="general-button generate-button">Share my public key</button></a>
+          <button class="linkstyle-button u-margin-top-l">Export my keys</button>
+        </div>
+        <div class="u-border-top u-flex u-padding-l">
+          <label class="switch u-margin-right-s">
+            <input type="checkbox" class="toggle-dangerous-actions">
+            <span class="slider round"></span>
+          </label>
+          <i>Show dangerous actions</i>
+        </div>
+        <!-- show if toggle is activated -->
+        <div class="dangerous-actions-buttons u-padding-bottom-l" style="display: none">
+          <button class="linkstyle-button">Delete</button>
+          <button class="linkstyle-button u-margin-top-s">Regenerate</button>
+          <button class="linkstyle-button u-margin-top-s">Modify</button>
+        </div>
       </div>
     </section>
 
 
   </body>
-  <script src="index.js"></script>
+  <script src="js/index.js"></script>
 </html>
