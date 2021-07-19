@@ -12,28 +12,29 @@
 
 
 /******* loading *******/
-.loading p {
+.loading-user-keys p {
   font-style: italic;
-  color: #ce44ce;
   text-align: center;
 }
-.loading-dot-container {
+.loading-user-keys .loading-dot-container {
   display: flex;
   justify-content: center;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
-.loading .dot {
+.loading-user-keys .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   margin: 0 5px;
-  background: white;
+  background: #eee;
   animation-name: dot-animation;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
-.loading .dot1 { animation-delay: 0s; }
-.loading .dot2 { animation-delay: 0.25s; }
-.loading .dot3 { animation-delay: 0.5s; }
+.loading-user-keys .dot1 { animation-delay: 0s; }
+.loading-user-keys .dot2 { animation-delay: 0.25s; }
+.loading-user-keys .dot3 { animation-delay: 0.5s; }
 @keyframes dot-animation {
   0% { transform: translateY(0px); }
   15% { transform: translateY(-10px); }
@@ -46,6 +47,26 @@
 /******* user-keys-section *******/
 .user-keys-section p {
   text-align: center;
-  color: white;
   font-style: italic;
+}
+
+
+
+/******* friends-keys-section *******/
+.keys-friends-list {
+  max-height: 200px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+.keys-friends-list ul {
+  padding: 0 0;
+  margin: 0 0;
+}
+.keys-friends-list ul li {
+  list-style: none;
+  padding: 14px 20px;
+  border-top: 1px dashed #555;
+}
+.keys-friends-list ul li:first-child {
+  border: none;
 }

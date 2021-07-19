@@ -9,54 +9,80 @@
 
 
     <!-- header -->
-    <header class="header">
+    <header class="header u-flex u-margin-bottom">
       <img src="images/logo.png" width="110" height="110" />
-      <p class="u-font-size-s u-margin-bottom-l"><b>BONES</b> is a utility for RSA encryption and decryption of your messages on any communication system. Manage your RSA keys yourself. You are the only master. <a href="https://github.com/ArguelBenoit/e2e-chat-encryption">github</a></p>
+      <div class="u-font-size-s u-margin-left"><b>BONES</b> is a utility for RSA (2048) encryption and decryption of your messages on any communication system. Manage your RSA keys yourself. You are the only master. <a href="https://github.com/ArguelBenoit/e2e-chat-encryption">github</a></div>
     </header>
-
-
-    <!-- loading -->
-    <section class="loading u-purple-container u-padding-l" style="display: inherit">
-      <p>The grave digger is working, do not touch <b>anything</b>!</p>
-      <div class="loading-dot-container u-margin-top-m">
-        <div class="dot dot1"></div>
-        <div class="dot dot2"></div>
-        <div class="dot dot3"></div>
-      </div>
-    </section>
 
 
     <!-- user keys -->
     <section class="user-keys-section u-purple-container">
-      <!-- if the keys don't exist  -->
-      <div class="no-user-keys u-padding-l" style="display: none">
-        <p>
-          The extension does not have your keys.<br/>What do you want to do?
-        </p>
-        <button class="general-button generate-button u-margin-bottom-s">Generate a pair of keys</button>
-        <button class="linkstyle-button import-public-key-button">Add my existing keys</button>
+      <div class="u-padding u-border-bottom u-text-center u-white-color u-font-size-l">Your keys options</div>
+
+      <!-- loading -->
+      <div class="loading-user-keys u-padding" style="display: inherit">
+        <p class="u-purple-color">The grave digger is working, do not touch <b>anything</b>!</p>
+        <div class="loading-dot-container u-margin-top-m">
+          <div class="dot dot1"></div>
+          <div class="dot dot2"></div>
+          <div class="dot dot3"></div>
+        </div>
       </div>
+
+      <!-- if the keys don't exist  -->
+      <div class="no-user-keys u-padding" style="display: none">
+        <p class="u-purple-color">
+          The extension does not have your keys. To encrypt and decrypt your messages BONES needs a pair of RSA 2048 keys. What do you want to do?
+        </p>
+        <button class="general-button generate-button u-margin-bottom">Generate my pair of keys</button>
+        <a href="send-keys.html" class="linkstyle-button">Add my existing pair of keys</a>
+      </div>
+
       <!-- if keys existing -->
       <div class="has-user-keys" style="display: none">
-        <div class="u-padding-l">
+        <div class="u-padding">
           <a style="text-decoration: none" href="public-key.html"><button class="general-button generate-button">Share my public key</button></a>
-          <button class="linkstyle-button u-margin-top-l">Export my keys</button>
+          <button class="linkstyle-button u-margin-top">Export my keys</button>
         </div>
-        <div class="u-border-top u-flex u-padding-l">
-          <label class="switch u-margin-right-s">
-            <input type="checkbox" class="toggle-dangerous-actions">
-            <span class="slider round"></span>
-          </label>
-          <i>Show dangerous actions</i>
-        </div>
-        <!-- show if toggle is activated -->
-        <div class="dangerous-actions-buttons u-padding-bottom-l" style="display: none">
-          <button class="linkstyle-button">Delete</button>
-          <button class="linkstyle-button u-margin-top-s">Regenerate</button>
-          <button class="linkstyle-button u-margin-top-s">Modify</button>
+
+        <div class="u-padding u-border-top-dashed">
+          <!-- toggle dangerous actions -->
+          <div class="u-flex">
+            <label class="switch u-margin-right">
+              <input type="checkbox" class="toggle-dangerous-actions">
+              <span class="slider round"></span>
+            </label>
+            <i>Show dangerous keys actions</i>
+          </div>
+
+          <!-- show if toggle is activated -->
+          <div class="dangerous-actions-buttons" style="display: none">
+            <button class="linkstyle-button u-margin-top delete-user-keys-button">Delete</button>
+            <button class="linkstyle-button u-margin-top regenerate-button">Regenerate</button>
+          </div>
         </div>
       </div>
+
     </section>
+
+
+    <!-- the public keys of my friends -->
+    <section class="keys-friends-section u-purple-container u-margin-top">
+      <div class="u-padding u-border-bottom u-text-center u-padding u-white-color u-font-size-l">Public keys of my friends</div>
+      <!-- list of keys -->
+      <div class="keys-friends-list">
+        <ul>
+          <li>Marine</li>
+          <li>Précepteur</li>
+          <li>Théo</li>
+          <li>Philippot</li>
+        <ul>
+      </div>
+      <div class="u-padding u-border-top">
+        <button class="general-button generate-button">Add friend's public key</button>
+      </div>
+    </section>
+
 
 
   </body>

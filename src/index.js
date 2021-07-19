@@ -1,13 +1,13 @@
-
 const keyGen = require('./bin/keyGen.js');
-
 /* dom element */
 const generateButton = document.querySelector('.generate-button');
-const userKeysSection = document.querySelector('.user-keys-section');
+const regenerateButton = document.querySelector('.regenerate-button');
 const noUserKeys = document.querySelector('.no-user-keys');
 const hasUserKeys = document.querySelector('.has-user-keys');
-const loading = document.querySelector('.loading');
+const loadingUserKeys = document.querySelector('.loading-user-keys');
 const toggleDangerousActions = document.querySelector('.toggle-dangerous-actions');
+const deleteUserKeysButton = document.querySelector('.delete-user-keys-button');
+
 
 
 
@@ -18,16 +18,17 @@ gettingKeys.then(
     if (data.private) { // if there is key
       noUserKeys.style.display = 'none';
       hasUserKeys.style.display = 'inherit';
-      loading.style.display = 'none';
+      loadingUserKeys.style.display = 'none';
 
     } else { // if there is no key
       noUserKeys.style.display = 'inherit';
       hasUserKeys.style.display = 'none';
-      loading.style.display = 'none';
+      loadingUserKeys.style.display = 'none';
     }
   },
   err => console.log(err)
 );
+
 
 
 
@@ -45,12 +46,14 @@ toggleDangerousActions.onclick = () => {
 
 
 
+
 /******* keys Generation *******/
-generateButton.onclick = () => {
+const generateKeys = () => {
 
   /* show loading and unshow button */
-  userKeysSection.style.display = 'none';
-  loading.style.display = 'inherit';
+  noUserKeys.style.display = 'none';
+  hasUserKeys.style.display = 'none';
+  loadingUserKeys.style.display = 'inherit';
 
   setTimeout(() => {
     /* generate keys */
@@ -62,11 +65,23 @@ generateButton.onclick = () => {
       'public': keys.public
     }).then(() => console.log('success'), err => console.log(err));
 
-    /* unshow loadin, show keyContent, unShow noUserKeys (we have keys now), show userKeysContent */
-    loading.style.display = 'none';
-    userKeysSection.style.display = 'inherit';
+    /* unshow loading, show keyContent (we have keys now) */
     noUserKeys.style.display = 'none';
     hasUserKeys.style.display = 'inherit';
+    loadingUserKeys.style.display = 'none';
 
   }, 50);
+};
+generateButton.onclick = () => generateKeys();
+regenerateButton.onclick = () => generateKeys();
+
+
+
+
+/******* delete user keys *******/
+deleteUserKeysButton.onclick = () => {
+  browser.storage.local.remove(['public', 'private']); /* eslint-disable-line */
+  noUserKeys.style.display = 'inherit';
+  hasUserKeys.style.display = 'none';
+  loadingUserKeys.style.display = 'none';
 };

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/send-keys.css"/>
+  </head>
+  <body>
+
+    <!-- return button (common) -->
+    <a href="index.html" class="return-link">
+      <div>
+        <img src="images/cross.png" width="22" height="22" />
+        GO BACK !
+      </div>
+    </a>
+
+    <div class="u-margin-top">
+      <div class="u-purple-color u-purple-container u-padding-s">
+        <i>
+          Take care to import a pair of RSA 2048 keys, BONES does not test the consistency of the two keys as well as their size (2048). If you don't know what you are doing, use generation.
+        </i>
+      </div>
+      <!-- private key -->
+      <div class="u-margin-top">
+        <label>Your private key</label>
+        <textarea name="name" rows="8" cols="80" class="input-private-key u-purple-container" placeholder="Paste your private key here"></textarea>
+        <span class="private-key-error-empty key-error">This field is required</span>
+        <span class="private-key-error-key key-error">This is not a RSA private key</span>
+      </div>
+      <!-- public key -->
+      <div class="u-margin-top">
+        <label>Your public key</label>
+        <textarea name="name" rows="8" cols="80" class="input-public-key u-purple-container" placeholder="Paste your public key here"></textarea>
+        <span class="public-key-error-empty key-error">This field is required</span>
+        <span class="public-key-error-key key-error">This is not a RSA public key</span>
+      </div>
+    </div>
+
+    <button class="general-button generate-button u-margin-top save-keys">Save your keys</button>
+  </body>
+  <script src="js/send-keys.js"></script>
+</html>

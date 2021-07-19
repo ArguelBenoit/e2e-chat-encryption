@@ -1,0 +1,21 @@
+
+.input-public-key,
+.input-private-key {
+  width: 100%;
+  color: #eee;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  max-height: 100px;
+}
+.key-error {
+  margin-top: 5px;
+  color: red;
+  font-style: italic;
+}
+.public-key-error-empty,
+.private-key-error-empty,
+.public-key-error-key,
+.private-key-error-key {
+  display: none;
+}

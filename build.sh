@@ -33,6 +33,9 @@
 # build js files
 # build_js_file index
 # build_js_file public-key
+# build_js_file send-keys
+
 
 browserify src/index.js | uglifyjs > public/js/index.js
 browserify src/public-key.js | uglifyjs > public/js/public-key.js
+browserify src/send-keys.js | uglifyjs > public/js/send-keys.js
